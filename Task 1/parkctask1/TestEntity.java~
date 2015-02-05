@@ -1,0 +1,48 @@
+//Chris Park
+
+import java.util.*;
+public class TestEntity
+{
+	public static void main(String[] args)
+	{
+		Entity dog = new EntityDog("Rover");
+		Entity ghost = new EntityGhost("Casper");
+		Entity tree = new EntityTree("Oak");
+		
+		System.out.println("Test Output");
+		System.out.println();
+		
+		System.out.println("Entity IDs");
+		System.out.println(dog.getID());
+		System.out.println(ghost.getID());
+		System.out.println(tree.getID());
+		
+		System.out.println();
+		System.out.println("Attack Tests");
+		System.out.println();
+		
+		dog.initiateAttack(dog);
+		dog.initiateAttack(ghost);
+		dog.initiateAttack(tree);
+		
+		System.out.println();
+		
+		ghost.initiateAttack(dog);
+		ghost.initiateAttack(ghost);
+		ghost.initiateAttack(tree);
+		
+		System.out.println();
+		
+		tree.initiateAttack(dog);
+		tree.initiateAttack(ghost);
+		tree.initiateAttack(tree);
+		
+		System.out.println();
+		
+		dog.move();
+		ghost.move();
+		tree.move();
+
+		
+	}
+}
